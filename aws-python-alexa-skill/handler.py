@@ -1,4 +1,4 @@
-import random
+import secrets
 
 
 def parseInt(value):
@@ -17,7 +17,7 @@ def lucky_number(event, context):
     else:
         upperLimit = 100
 
-    number = random.randint(0, upperLimit)
+    number = secrets.SystemRandom().randint(0, upperLimit)
     response = {
         'version': '1.0',
         'response': {
